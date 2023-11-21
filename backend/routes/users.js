@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-const User = require('../models/userModel')
 const {
   getUsers,
   getUser,
@@ -18,7 +17,7 @@ router.get('/:id', getUser)
 // POST a new user
 router.post('/', createUser)
 
-// DELETE a new user
+// DELETE a user
 router.delete('/:id', deleteUser)
 
 // UPDATE a user

@@ -22,6 +22,7 @@ const createUser = async (req, res) => {
   console.log(req.body)
   const { username, password, businessName } = req.body
   try {
+    // TEMPORARY. NEED TO HASH PASSWORD
     const newUser = await User.create({ username, password, businessName})
     res.status(200).json({user: newUser})
   } catch (err) {
